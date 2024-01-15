@@ -17,7 +17,7 @@ from wordcloud import WordCloud, STOPWORDS
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
  # Useful functions for displaying stuff
-df = pd.read_csv('/Users/yw/Downloads/output1_.csv')
+df = pd.read_csv('output1_.csv')
 
 COLOR_RED = "#FF4B4B"
 COLOR_BLACK = "#000000"
@@ -153,13 +153,13 @@ st.write("## Sentiment from the most recent ", len(df['text'])," tweets")
 total_color = COLOR_BLACK
 
 
-b, c = st.columns(2)
+a, b = st.columns(2)
 
-with b:
+with a:
     display_dial(
         "POSITIVO", f"{count_pos}", "#008000"
     )
-with c:
+with b:
     display_dial(
         "NEGATIVO", f"{count_neg}", "#FF4B4B"
     )
